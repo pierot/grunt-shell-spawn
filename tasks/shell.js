@@ -1,4 +1,3 @@
-
 /*
  * (c) Sindre Sorhus
  * sindresorhus.com
@@ -39,11 +38,15 @@ module.exports = function( grunt ) {
 
             proc = procs[target];
             if (!proc) {
-                grunt.fatal('No running process for target:' + target);
+                if(options.failOnError) {
+                    grunt.fatal('No running process for target:' + target);    
+                }
+            } else {
+                grunt.verbose.writeln('Killing process for target: ' + target + ' (pid = ' + proc.pid + ')');
+                proc.kill('SIGKILL');
+                delete procs[target];
             }
-            grunt.verbose.writeln('Killing process for target: ' + target + ' (pid = ' + proc.pid + ')');
-            proc.kill('SIGKILL');
-            delete procs[target];
+            
             done();
             return;
         }
