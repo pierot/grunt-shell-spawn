@@ -6,6 +6,10 @@
 
 -----
 
+> A fork on [cri5ti][1]'s [grunt-shell-spawn][2] ***with support for failOnError from withtin kill funciontality***.
+
+-----
+
 *This plugin requires grunt >= 0.4.x. For grunt 0.3.x, use version `0.1.3`.*
 
 ### Install
