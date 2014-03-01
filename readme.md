@@ -6,7 +6,7 @@
 
 -----
 
-> A fork on [cri5ti][1]'s [grunt-shell-spawn][2] ***with support for failOnError from withtin kill funciontality***.
+> A fork on [cri5ti][1]'s [grunt-shell-spawn][2] ***with support for failOnError from withtin kill functionality***.
 
 -----
 
